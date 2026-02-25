@@ -176,8 +176,8 @@ ${formData.additionalInfo}
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-4"
         >
-          <div className="mx-auto w-16 h-16 rounded-full bg-emerald-50 flex items-center justify-center mb-4">
-            <FiCheckCircle className="text-emerald-500" size={32} />
+          <div className="mx-auto w-16 h-16 rounded-full bg-primary-50 flex items-center justify-center mb-4">
+            <FiCheckCircle className="text-primary-600" size={32} />
           </div>
           <h2 className="text-2xl font-bold text-slate-900">Thank you for your request</h2>
           <p className="text-slate-600 max-w-xl mx-auto">
@@ -193,7 +193,7 @@ ${formData.additionalInfo}
             </Link>
             <Link
               href="/"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-emerald-600 text-white font-semibold shadow-md hover:bg-emerald-500 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary-600 text-white font-semibold shadow-md hover:bg-primary-500 transition-colors"
             >
               Back to Home
             </Link>
@@ -224,7 +224,7 @@ ${formData.additionalInfo}
                   type="text"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                   placeholder="Your full name"
                   required
                 />
@@ -239,7 +239,7 @@ ${formData.additionalInfo}
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                   placeholder="your.email@organization.com"
                   required
                 />
@@ -257,7 +257,7 @@ ${formData.additionalInfo}
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                   placeholder="+91-XXXXXXXXXX"
                 />
               </div>
@@ -271,7 +271,7 @@ ${formData.additionalInfo}
                   type="text"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                   placeholder="Your organization name"
                   required
                 />
@@ -289,7 +289,7 @@ ${formData.additionalInfo}
                   type="text"
                   value={formData.designation}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                   placeholder="e.g., Clinical Project Manager"
                 />
               </div>
@@ -316,7 +316,7 @@ ${formData.additionalInfo}
                 type="text"
                 value={formData.projectTitle}
                 onChange={handleChange}
-                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                 placeholder="Working title of your study or program"
                 required
               />
@@ -331,7 +331,7 @@ ${formData.additionalInfo}
                 value={formData.objectives}
                 onChange={handleChange}
                 rows={5}
-                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none text-gray-900"
+                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none text-gray-900"
                 placeholder="Briefly describe the research questions, endpoints, or hypotheses you are aiming to address."
                 required
               />
@@ -358,7 +358,7 @@ ${formData.additionalInfo}
                 type="text"
                 value={formData.indications}
                 onChange={handleChange}
-                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                 placeholder="e.g., Breast cancer, TB, NASH"
                 required
               />
@@ -373,7 +373,7 @@ ${formData.additionalInfo}
                 value={formData.sampleTypes}
                 onChange={handleChange}
                 rows={4}
-                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none text-gray-900"
+                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none text-gray-900"
                 placeholder="e.g., FFPE tumor tissue, matched normal tissue, serum, plasma, PBMC, CSF, etc."
                 required
               />
@@ -389,7 +389,7 @@ ${formData.additionalInfo}
                   type="text"
                   value={formData.sampleQuantity}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                   placeholder="e.g., 100 FFPE blocks, 200 plasma samples"
                   required
                 />
@@ -404,7 +404,7 @@ ${formData.additionalInfo}
                   value={formData.inclusionCriteria}
                   onChange={handleChange}
                   rows={3}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none text-gray-900"
                   placeholder="Age range, disease stage, treatment status, biomarkers, etc."
                 />
               </div>
@@ -419,7 +419,7 @@ ${formData.additionalInfo}
                 value={formData.exclusionCriteria}
                 onChange={handleChange}
                 rows={3}
-                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none text-gray-900"
+                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none text-gray-900"
                 placeholder="Any specific conditions or factors to exclude from recruitment."
               />
             </div>
@@ -445,7 +445,7 @@ ${formData.additionalInfo}
                 value={formData.servicesNeeded}
                 onChange={handleChange}
                 rows={4}
-                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none text-gray-900"
+                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none text-gray-900"
                 placeholder="e.g., retrospective collections, prospective recruitment, sample processing, logistics, data management, etc."
                 required
               />
@@ -461,7 +461,7 @@ ${formData.additionalInfo}
                   value={formData.timeline}
                   onChange={handleChange}
                   rows={3}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none text-gray-900"
                   placeholder="Target start date, enrollment period, delivery windows, etc."
                   required
                 />
@@ -476,7 +476,7 @@ ${formData.additionalInfo}
                   value={formData.regions}
                   onChange={handleChange}
                   rows={3}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none text-gray-900"
                   placeholder="Geographies, site types, or specific partner preferences."
                 />
               </div>
@@ -492,7 +492,7 @@ ${formData.additionalInfo}
                   type="text"
                   value={formData.regulatoryStatus}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                   placeholder="e.g., Protocol drafted, IEC submission planned, approvals in place."
                 />
               </div>
@@ -506,7 +506,7 @@ ${formData.additionalInfo}
                   type="text"
                   value={formData.budgetRange}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-gray-900"
+                  className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent text-gray-900"
                   placeholder="e.g., USD 50k–100k"
                 />
               </div>
@@ -521,7 +521,7 @@ ${formData.additionalInfo}
                 value={formData.additionalInfo}
                 onChange={handleChange}
                 rows={4}
-                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none text-gray-900"
+                className="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none text-gray-900"
                 placeholder="Any other details, documents already available, or specific considerations."
               />
             </div>
@@ -610,7 +610,7 @@ ${formData.additionalInfo}
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="py-20 bg-linear-to-br from-primary-50 via-white to-teal-50">
+      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -619,7 +619,7 @@ ${formData.additionalInfo}
             className="text-center"
           >
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="bg-linear-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent">
                 Feasibility Request
               </span>
             </h1>
@@ -648,7 +648,7 @@ ${formData.additionalInfo}
                 animate={{ opacity: 1, y: 0 }}
                 className={`mt-6 flex items-center space-x-2 p-4 rounded-lg ${
                   submitStatus.type === 'success'
-                    ? 'bg-emerald-50 text-emerald-800 border border-emerald-200'
+                    ? 'bg-primary-50 text-primary-800 border border-primary-200'
                     : 'bg-red-50 text-red-800 border border-red-200'
                 }`}
               >
@@ -678,7 +678,7 @@ ${formData.additionalInfo}
                     type="button"
                     onClick={handleNext}
                     disabled={isSubmitting}
-                    className="inline-flex items-center px-6 py-3 rounded-lg bg-emerald-600 text-white text-sm font-semibold shadow-md hover:bg-emerald-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="inline-flex items-center px-6 py-3 rounded-lg bg-primary-600 text-white text-sm font-semibold shadow-md hover:bg-primary-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Next
                     <FiArrowRight className="ml-2" size={18} />
@@ -688,7 +688,7 @@ ${formData.additionalInfo}
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center px-6 py-3 rounded-lg bg-emerald-600 text-white text-sm font-semibold shadow-md hover:bg-emerald-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="inline-flex items-center px-6 py-3 rounded-lg bg-primary-600 text-white text-sm font-semibold shadow-md hover:bg-primary-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>

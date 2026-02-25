@@ -7,7 +7,7 @@ export default function QualityCompliancePage() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="py-20 bg-linear-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section className="py-20 bg-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -15,17 +15,17 @@ export default function QualityCompliancePage() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <p className="text-sm font-semibold tracking-wide text-primary-300 uppercase mb-3">
+            <p className="text-sm font-semibold tracking-wide text-primary-600 uppercase mb-3">
               Quality & Compliance
             </p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
               Regulatory-Grade Biospecimen Operations, Built for Trust
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-6">
+            <p className="text-lg md:text-xl text-gray-700 mb-6">
               Clin Vedica Life Sciences embeds ethics, quality, and regulatory alignment into every stage of biospecimen
               procurement, handling, and data management—so your studies are supported by samples you can stand behind.
             </p>
-            <p className="text-sm text-gray-300">
+            <p className="text-sm text-gray-600">
               From ethics approvals and informed consent to biosafety and documentation, our framework is designed to
               meet the expectations of sponsors, investigators, and regulatory bodies.
             </p>
@@ -188,7 +188,7 @@ export default function QualityCompliancePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-linear-to-r from-primary-600 to-teal-600">
+      <section className="py-20 bg-gradient-to-r from-primary-600 to-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

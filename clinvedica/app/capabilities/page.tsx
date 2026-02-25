@@ -51,7 +51,7 @@ export default function CapabilitiesPage() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="py-20 bg-linear-to-br from-primary-50 via-white to-teal-50">
+      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ export default function CapabilitiesPage() {
             className="text-center"
           >
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="bg-linear-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent">
                 Our Capabilities
               </span>
             </h1>

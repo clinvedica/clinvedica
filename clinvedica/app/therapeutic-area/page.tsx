@@ -34,7 +34,7 @@ export default function TherapeuticArea() {
       title: 'Metabolic Disorders',
       description: 'Biospecimens for metabolic disease research including various tissue and biofluid samples.',
       samples: ['Tissue Samples', 'Blood Samples', 'Urine', 'Serum'],
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-primary-500 to-teal-500',
     },
     {
       title: 'Infectious Diseases',
@@ -46,7 +46,7 @@ export default function TherapeuticArea() {
       title: 'Respiratory',
       description: 'Specialized biospecimens for respiratory disease research including lung tissues and related samples.',
       samples: ['Lung Tissues', 'Blood Samples', 'BAL Fluid', 'Serum'],
-      color: 'from-teal-500 to-cyan-500',
+      color: 'from-teal-600 to-teal-400',
     },
     {
       title: 'Rare Diseases',
