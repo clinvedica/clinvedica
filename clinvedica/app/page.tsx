@@ -210,8 +210,8 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto text-center">
+            <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100 flex flex-col items-center">
               <p className="text-4xl font-extrabold text-primary-600 mb-2">50+</p>
               <p className="text-gray-700 font-semibold mb-1">Partner Institutions</p>
               <p className="text-gray-500 text-sm">
@@ -219,7 +219,7 @@ export default function Home() {
                 global projects.
               </p>
             </div>
-            <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+            <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100 flex flex-col items-center">
               <p className="text-4xl font-extrabold text-primary-600 mb-2">15+</p>
               <p className="text-gray-700 font-semibold mb-1">Therapeutic Areas</p>
               <p className="text-gray-500 text-sm">
