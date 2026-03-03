@@ -56,11 +56,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          <Link href="/" className="flex items-center space-x-2 -ml-4">
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent">
-              Clin Vedica
+          <Link href="/" className="flex flex-col items-start gap-0.7 -ml-3">
+            <img
+              src="/logo.png"
+              alt="Clin Vedica Life Sciences"
+              className="shrink-0 w-[120px] h-auto"
+            />
+            <span className="text-base font-bold leading-tight bg-gradient-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent pl-8">
+              ClinVedica
             </span>
-            <span className="text-sm text-gray-600 hidden sm:inline">Life Sciences</span>
           </Link>
 
           {/* Desktop Navigation */}

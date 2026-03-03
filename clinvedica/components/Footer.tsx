@@ -10,7 +10,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-white">Clin Vedica</h3>
+            <Link href="/" className="flex flex-col items-start gap-1 -ml-1">
+              <img
+                src="/logo.png"
+                alt="Clin Vedica Life Sciences"
+                className="shrink-0 w-[120px] h-auto"
+              />
+              <span className="text-base font-bold leading-tight bg-gradient-to-r from-primary-400 to-teal-400 bg-clip-text text-transparent pl-6">
+                ClinVedica
+              </span>
+            </Link>
             <p className="text-sm text-gray-300">
               Powering Discovery with Ethical, Compliant, and Tailored Biospecimen Solutions.
             </p>

@@ -20,8 +20,8 @@ export default function StepProgress({ steps, currentStep }: StepProgressProps) 
               <motion.div
                 initial={false}
                 animate={{
-                  backgroundColor: isActive || isCompleted ? 'rgb(5 122 85)' : 'rgba(148, 163, 184, 1)',
-                  borderColor: isActive ? 'rgb(5 122 85)' : 'rgba(148, 163, 184, 1)',
+                  backgroundColor: isActive || isCompleted ? '#A32626' : 'rgba(148, 163, 184, 1)',
+                  borderColor: isActive ? '#A32626' : 'rgba(148, 163, 184, 1)',
                   color: '#ffffff',
                 }}
                 className={`flex items-center justify-center w-9 h-9 rounded-full border text-sm font-semibold ${
@@ -44,7 +44,7 @@ export default function StepProgress({ steps, currentStep }: StepProgressProps) 
                   animate={{
                     width: isCompleted ? '100%' : isActive ? '50%' : '0%',
                   }}
-                  className="h-0.5 bg-emerald-500 absolute left-0 top-0"
+                  className="h-0.5 bg-primary-600 absolute left-0 top-0"
                 />
               </div>
             )}
