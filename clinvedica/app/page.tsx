@@ -43,6 +43,11 @@ export default function Home() {
       description: 'A single point of contact from feasibility through delivery, ensuring transparent updates, risk management, and milestone tracking.',
     },
     {
+      icon: <FiCheckCircle />,
+      title: 'Specialized Lab & Testing Services',
+      description: 'Access to partner labs for specific testing services—from sample processing to assay-ready outputs tailored to your study design.',
+    },
+    {
       icon: <FiTruck />,
       title: 'Logistical Excellence',
       description: 'Temperature-controlled packaging, real-time tracking, and compliant documentation to protect sample integrity end-to-end.',
@@ -207,21 +212,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
-              <p className="text-4xl font-extrabold text-primary-600 mb-2">10,000+</p>
-              <p className="text-gray-700 font-semibold mb-1">Biospecimens Supplied</p>
-              <p className="text-gray-500 text-sm">
-                Spanning tissue, blood, and biofluids across multiple disease areas and study designs.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
-              <p className="text-4xl font-extrabold text-primary-600 mb-2">25+</p>
+              <p className="text-4xl font-extrabold text-primary-600 mb-2">50+</p>
               <p className="text-gray-700 font-semibold mb-1">Partner Institutions</p>
               <p className="text-gray-500 text-sm">
-                Hospitals and research centers across India, with the ability to support regional and global projects.
+                Hospitals, clinics, labs, and collection centers across India, with the ability to support regional and
+                global projects.
               </p>
             </div>
             <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
-              <p className="text-4xl font-extrabold text-primary-600 mb-2">5+</p>
+              <p className="text-4xl font-extrabold text-primary-600 mb-2">15+</p>
               <p className="text-gray-700 font-semibold mb-1">Therapeutic Areas</p>
               <p className="text-gray-500 text-sm">
                 Oncology, infectious diseases, metabolic/endocrine, autoimmune, and more as our network expands.

@@ -2,21 +2,27 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { FiArrowRight } from 'react-icons/fi';
 
 export default function TherapeuticArea() {
+  const router = useRouter();
+
   const areas = [
     {
       title: 'Oncology',
-      description: 'Comprehensive biospecimen solutions for cancer research, including tumor tissues, matched normal samples, and associated biofluids.',
+      description:
+        'Comprehensive biospecimen solutions for cancer research, including tumor tissues, matched normal samples, and associated biofluids.',
       samples: ['Tumor Tissues', 'Matched Normal', 'Blood Samples', 'Biofluids'],
       color: 'from-red-500 to-pink-500',
     },
     {
       title: 'Cardiovascular',
-      description: 'Specialized samples for cardiovascular disease research, including cardiac tissues and blood derivatives.',
-      samples: ['Cardiac Tissues', 'Blood Samples', 'Serum & Plasma', 'PBMC'],
+      description:
+        'Specialized samples for cardiovascular disease research, including blood and its derivatives.',
+      samples: ['Blood Samples', 'Serum & Plasma', 'PBMC', 'Buffy Coat'],
       color: 'from-red-600 to-rose-600',
+      href: '/therapeutic-area/cardiovascular',
     },
     {
       title: 'Neurological',
@@ -44,7 +50,8 @@ export default function TherapeuticArea() {
     },
     {
       title: 'Respiratory',
-      description: 'Specialized biospecimens for respiratory disease research including lung tissues and related samples.',
+      description:
+        'Specialized biospecimens for respiratory disease research including lung tissues and related samples.',
       samples: ['Lung Tissues', 'Blood Samples', 'BAL Fluid', 'Serum'],
       color: 'from-teal-600 to-teal-400',
     },
@@ -59,7 +66,7 @@ export default function TherapeuticArea() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-teal-50">
+      <section className="py-20 bg-linear-to-br from-primary-50 via-white to-teal-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -85,15 +92,24 @@ export default function TherapeuticArea() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {areas.map((area, index) => (
               <motion.div
-                key={index}
+                key={area.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col"
+                onClick={() => {
+                  if (area.href) {
+                    router.push(area.href);
+                  }
+                }}
+                className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col ${
+                  area.href ? 'cursor-pointer' : ''
+                }`}
               >
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${area.color} mb-4 flex items-center justify-center text-white font-bold text-xl`}>
+                <div
+                  className={`w-12 h-12 rounded-lg bg-gradient-to-br ${area.color} mb-4 flex items-center justify-center text-white font-bold text-xl`}
+                >
                   {area.title.charAt(0)}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{area.title}</h3>
@@ -109,10 +125,10 @@ export default function TherapeuticArea() {
                     ))}
                   </ul>
                 </div>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center text-sm text-primary-600 font-semibold hover:text-teal-600 transition-colors mt-auto"
-                >
+            <Link
+              href="/contact"
+              className="inline-flex items-center text-sm text-primary-600 font-semibold hover:text-teal-600 transition-colors mt-auto"
+            >
                   Request Samples
                   <FiArrowRight className="ml-2" size={16} />
                 </Link>
@@ -126,7 +142,7 @@ export default function TherapeuticArea() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-br from-primary-50 to-teal-50 rounded-2xl p-8 md:p-12"
+            className="bg-linear-to-br from-primary-50 to-teal-50 rounded-2xl p-8 md:p-12"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
               Comprehensive Therapeutic Area Support
@@ -157,7 +173,7 @@ export default function TherapeuticArea() {
           <div className="mt-12 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-teal-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 bg-linear-to-r from-primary-600 to-teal-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               Discuss Your Therapeutic Area Needs
             </Link>
