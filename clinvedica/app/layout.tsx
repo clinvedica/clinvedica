@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -6,17 +6,29 @@ import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { getSiteUrl } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://clinvedica.app";
-const googleVerification = process.env.GOOGLE_SITE_VERIFICATION;
+const siteUrl = getSiteUrl();
+/** Google Search Console HTML tag method; override via GOOGLE_SITE_VERIFICATION if needed */
+const googleSiteVerification =
+  process.env.GOOGLE_SITE_VERIFICATION ??
+  "p6oqol9tv0ZsZ1Ulh5wNOou3h_BlmUmDfrz-Q7NwCpc";
+
+export const viewport: Viewport = {
+  themeColor: "#A32626",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: "Clin Vedica Life Sciences",
   title: {
     default: "Clin Vedica Life Sciences - Powering Discovery",
     template: "%s | Clin Vedica Life Sciences",
@@ -53,11 +65,14 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  ...(googleVerification && {
-    verification: {
-      google: googleVerification,
-    },
-  }),
+  icons: {
+    apple: "/logo.png",
+  },
+  appleWebApp: {
+    capable: true,
+    title: "Clin Vedica Life Sciences",
+    statusBarStyle: "default",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -68,7 +83,7 @@ export const metadata: Metadata = {
       "Ethical, Compliant, and Tailored Biospecimen Solutions for Global Biomedical Research.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Clin Vedica Life Sciences - Biospecimen Solutions for Research",
@@ -80,6 +95,7 @@ export const metadata: Metadata = {
     title: "Clin Vedica Life Sciences - Powering Discovery",
     description:
       "Ethical, Compliant, and Tailored Biospecimen Solutions for Global Biomedical Research.",
+    images: ["/logo.png"],
   },
   alternates: {
     canonical: siteUrl,
@@ -94,6 +110,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
+      <head>
+        <meta
+          name="google-site-verification"
+          content={googleSiteVerification}
+        />
+        <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      </head>
       <body className={`${inter.variable} antialiased`}>
         <JsonLd />
         <Navbar />

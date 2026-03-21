@@ -70,13 +70,13 @@ In `.env.local` (see `.env.example`):
 
 | Variable | Purpose |
 |----------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (e.g. `https://clinvedica.app`). Used in sitemap, Open Graph, and JSON-LD. |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (e.g. `https://clinvedica.com`). Used in sitemap, Open Graph, and JSON-LD. |
 | `GOOGLE_SITE_VERIFICATION` | Google Search Console HTML tag verification content (the value only, not the full meta tag). |
 
 ### Submitting to Google Search Console
 
 1. Go to [Google Search Console](https://search.google.com/search-console).
-2. Add a property with your site URL (e.g. `https://clinvedica.app`).
+2. Add a property with your site URL (e.g. `https://clinvedica.com`).
 3. **Verify ownership**: Choose “HTML tag”, copy the `content` value from the meta tag, set it in `.env.local` as `GOOGLE_SITE_VERIFICATION=...`, redeploy, then click “Verify” in Search Console.
 4. **Submit sitemap**: In Search Console, open “Sitemaps”, enter `sitemap.xml`, and submit. URL: `https://yourdomain.com/sitemap.xml`.
 5. Optionally add `public/og-image.png` (1200×630) for link previews and `public/logo.png` for structured data.
