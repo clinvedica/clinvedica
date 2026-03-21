@@ -1,3 +1,9 @@
+/**
+ * `/favicon.ico` is served from static files. Next.js prefers `app/favicon.ico` when present;
+ * keep it identical to `public/favicon.ico` after updating the asset.
+ */
+export const FAVICON_PATH = "/favicon.ico" as const;
+
 /** Production canonical origin (no trailing slash). Override with NEXT_PUBLIC_SITE_URL. */
 const DEFAULT_SITE_URL = "https://clinvedica.com";
 

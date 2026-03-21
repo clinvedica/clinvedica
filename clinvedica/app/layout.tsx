@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { getSiteUrl } from "@/lib/site";
+import { FAVICON_PATH, getSiteUrl } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -66,6 +66,10 @@ export const metadata: Metadata = {
     },
   },
   icons: {
+    icon: [
+      { url: FAVICON_PATH, sizes: "any", type: "image/x-icon" },
+    ],
+    shortcut: FAVICON_PATH,
     apple: "/logo.png",
   },
   appleWebApp: {
@@ -115,8 +119,6 @@ export default function RootLayout({
           name="google-site-verification"
           content={googleSiteVerification}
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       </head>
       <body className={`${inter.variable} antialiased`}>
         <JsonLd />
