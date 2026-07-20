@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
+import BrandLogo from './BrandLogo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,15 +23,15 @@ export default function Navbar() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { 
-      href: '/solutions', 
+    {
+      href: '/solutions',
       label: 'Solutions',
       submenu: [
         { href: '/solutions/tissue-samples', label: 'Tissue Samples' },
         { href: '/solutions/blood-derivatives', label: 'Blood & Derivatives' },
         { href: '/solutions/biofluids', label: 'Biofluids' },
         { href: '/solutions/matched-sets', label: 'Matched Set Biospecimens' },
-      ]
+      ],
     },
     { href: '/capabilities', label: 'Capabilities' },
     { href: '/feasibility-request', label: 'Feasibility Request' },
@@ -55,15 +56,17 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
-          <Link href="/" className="flex flex-col items-start gap-0.7 -ml-3">
-            <img
-              src="/logo.png"
-              alt="Clin Vedica Life Sciences"
-              className="shrink-0 w-[120px] h-auto"
-            />
-            <span className="text-base font-bold leading-tight bg-gradient-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent pl-8">
-              ClinVedica
+        <div className="flex justify-between items-center h-[4.5rem] md:h-[5.25rem]">
+          <Link
+            href="/"
+            className="shrink-0 -ml-1 md:-ml-2"
+            aria-label="Clin Vedica Life Sciences home"
+          >
+            <span className="md:hidden">
+              <BrandLogo size="sm" />
+            </span>
+            <span className="hidden md:inline-flex">
+              <BrandLogo size="md" />
             </span>
           </Link>
 
@@ -103,7 +106,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+            className="lg:hidden shrink-0 p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}

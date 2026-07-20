@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'matched set biospecimens',
   ],
   openGraph: {
-    title: 'Biospecimen Solutions | Clin Vedica Jalandhar',
+    title: 'Biospecimen Solutions | Clin Vedica Life Sciences Jalandhar',
     description:
       'Tissue, blood, biofluids, and matched sets from our Jalandhar, Punjab network for global research.',
   },

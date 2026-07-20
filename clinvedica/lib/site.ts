@@ -40,7 +40,7 @@ export const DEFAULT_SEO_KEYWORDS = [
   "biomedical research Punjab",
   "life sciences Jalandhar",
   "Clin Vedica Life Sciences",
-  "Clin Vedica Jalandhar",
+  "Clin Vedica Life Sciences Jalandhar",
 ] as const;
 
 /** Opens Google Maps with directions to the exact office address. */

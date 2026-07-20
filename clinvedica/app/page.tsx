@@ -158,7 +158,6 @@ export default function Home() {
         'Pseudomonas',
         'Salmonella',
         'Bordetella',
-        '...and many more.',
       ],
     },
     {

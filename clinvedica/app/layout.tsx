@@ -116,7 +116,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <JsonLd />
         <Navbar />
-        <main className="min-h-screen pt-16 md:pt-20">
+        <main className="min-h-screen pt-[4.5rem] md:pt-[5.25rem]">
           {children}
         </main>
         <Footer />

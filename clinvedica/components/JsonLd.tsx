@@ -15,7 +15,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "MedicalBusiness", "LocalBusiness"],
   name: "Clin Vedica Life Sciences",
-  alternateName: ["Clin Vedica", "ClinVedica"],
+  alternateName: ["Clin Vedica"],
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
   image: `${siteUrl}/logo.png`,

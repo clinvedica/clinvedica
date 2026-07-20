@@ -250,7 +250,6 @@ export const therapeuticAreas: TherapeuticAreaContent[] = [
       'Pseudomonas',
       'Salmonella',
       'Bordetella',
-      '...and many more.',
     ],
     sampleTypesIntro:
       'Infectious disease biospecimens collected under controlled handling conditions to protect sample integrity and biosafety.',

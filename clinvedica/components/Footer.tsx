@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FiMail, FiPhone, FiMapPin, FiLinkedin } from 'react-icons/fi';
 import FooterContactForm from './FooterContactForm';
+import BrandLogo from './BrandLogo';
 import { GOOGLE_MAPS_URL, OFFICE_ADDRESS } from '@/lib/site';
 
 export default function Footer() {
@@ -11,15 +12,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link href="/" className="flex flex-col items-start gap-1 -ml-1">
-              <img
-                src="/logo.png"
-                alt="Clin Vedica Life Sciences"
-                className="shrink-0 w-[120px] h-auto"
-              />
-              <span className="text-base font-bold leading-tight bg-gradient-to-r from-primary-400 to-teal-400 bg-clip-text text-transparent pl-6">
-                ClinVedica
-              </span>
+            <Link href="/" aria-label="Clin Vedica Life Sciences home">
+              <BrandLogo size="md" variant="light" className="items-start" />
             </Link>
             <p className="text-sm text-gray-300">
               Powering Discovery with Ethical, Compliant, and Tailored Biospecimen Solutions.

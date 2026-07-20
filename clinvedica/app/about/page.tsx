@@ -40,7 +40,7 @@ export default function About() {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-primary-600 to-teal-600 bg-clip-text text-transparent">
-                About Clin Vedica
+                About Clin Vedica Life Sciences
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
