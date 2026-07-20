@@ -36,6 +36,11 @@ export default function Biofluids() {
       description: 'Ocular fluid samples for ophthalmological research and biomarker discovery.',
       features: ['Ophthalmology research', 'Biomarker discovery', 'Quality tested', 'Research grade'],
     },
+    {
+      title: 'Others',
+      description: 'Additional specialized biofluids to support diverse research applications and study designs.',
+      features: ['Sputum', 'Semen', 'Cord blood', 'Tears'],
+    },
   ];
 
   return (

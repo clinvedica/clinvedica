@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiClock } from 'react-icons/fi';
+import { GOOGLE_MAPS_EMBED_URL, GOOGLE_MAPS_URL, OFFICE_ADDRESS } from '@/lib/site';
 
 export default function Contact() {
   const contactInfo = [
@@ -9,11 +10,15 @@ export default function Contact() {
       icon: <FiMapPin size={24} />,
       title: 'Address',
       content: (
-        <>
-          C-2, Sunshine Valley, Suchi Pind,
-          <br />
-          Jalandhar, Punjab - 144007, India
-        </>
+        <a
+          href={GOOGLE_MAPS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-primary-600 transition-colors"
+          aria-label="Get directions to Clin Vedica office in Google Maps"
+        >
+          {OFFICE_ADDRESS}
+        </a>
       ),
     },
     {
@@ -117,6 +122,46 @@ export default function Contact() {
                 For detailed feasibility assessments, please submit a request through our dedicated feasibility
                 workflow.
               </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="rounded-xl overflow-hidden shadow-md border border-gray-100"
+            >
+              <div className="flex items-center justify-between gap-3 px-4 py-3 bg-white border-b border-gray-100">
+                <div>
+                  <h3 className="font-semibold text-gray-900">Our Location</h3>
+                  <p className="text-xs text-gray-500 mt-0.5">{OFFICE_ADDRESS}</p>
+                </div>
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 text-sm font-medium text-primary-600 hover:text-teal-600 transition-colors"
+                >
+                  Get Directions
+                </a>
+              </div>
+              <a
+                href={GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative block group"
+                aria-label="Get directions to C-2, Sunshine Valley, Suchi Pind, Jalandhar in Google Maps"
+              >
+                <iframe
+                  title="Directions to Clin Vedica Life Sciences"
+                  src={GOOGLE_MAPS_EMBED_URL}
+                  className="w-full h-72 md:h-96 border-0 pointer-events-none"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <span className="absolute inset-0 bg-transparent group-hover:bg-black/5 transition-colors" />
+              </a>
             </motion.div>
           </motion.div>
         </div>

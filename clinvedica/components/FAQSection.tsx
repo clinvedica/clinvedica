@@ -13,12 +13,12 @@ const faqs: FAQ[] = [
   {
     question: 'What types of biospecimens can Clin Vedica provide?',
     answer:
-      'We support a broad range of human biospecimens including FFPE and frozen tissues, whole blood and derivatives (serum, plasma, PBMCs, BMMNCs), and multiple biofluids such as urine, saliva, CSF, synovial fluid, and ascites, among others.',
+      'We support a broad range of human biospecimens including FFPE, frozen, and cryopreserved tissues (with subtypes), healthy tissues from healthy donors, extracted DNA and RNA, whole blood and derivatives (serum, plasma, PBMCs, bone marrow, BMMNCs), and multiple biofluids such as urine, saliva, CSF, synovial fluid, ascites, aqueous humour, sputum, semen, cord blood, and tears.',
   },
   {
     question: 'How long does a typical feasibility assessment take?',
     answer:
-      'Timelines depend on the complexity of your request, but most feasibility assessments are completed within 5–10 business days once we have all necessary study details.',
+      'Most feasibility assessments are completed within 1–2 days once we have the necessary study details. More complex requests may take longer depending on protocol requirements.',
   },
   {
     question: 'Do you support both retrospective and prospective collections?',

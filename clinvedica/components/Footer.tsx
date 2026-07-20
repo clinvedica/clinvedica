@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FiMail, FiPhone, FiMapPin, FiLinkedin } from 'react-icons/fi';
 import FooterContactForm from './FooterContactForm';
+import { GOOGLE_MAPS_URL, OFFICE_ADDRESS } from '@/lib/site';
 
 export default function Footer() {
   return (
@@ -101,11 +102,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-3">
                 <FiMapPin className="mt-1 flex-shrink-0 text-primary-400" size={18} />
-                <span className="text-gray-300">
-                  C-2, Sunshine Valley, Suchi Pind,
-                  <br />
-                  Jalandhar, Punjab - 144007, India
-                </span>
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-primary-400 transition-colors"
+                  aria-label="Get directions to Clin Vedica office in Google Maps"
+                >
+                  {OFFICE_ADDRESS}
+                </a>
               </li>
               <li className="flex items-center space-x-3">
                 <FiPhone className="text-primary-400" size={18} />

@@ -7,24 +7,39 @@ import { FiArrowLeft, FiCheckCircle } from 'react-icons/fi';
 export default function TissueSamples() {
   const sampleTypes = [
     {
-      title: 'FFPE Blocks',
-      description: 'Formalin-Fixed Paraffin-Embedded tissue blocks preserved for long-term storage and analysis.',
-      features: ['Long-term preservation', 'Ideal for IHC', 'DNA/RNA extraction', 'Pathology review'],
+      title: 'FFPE',
+      description: 'Formalin-Fixed Paraffin-Embedded tissue samples preserved for long-term storage and analysis.',
+      features: ['Subtype 1', 'Subtype 2', 'Ideal for IHC', 'DNA/RNA extraction'],
     },
     {
-      title: 'Frozen Tissues',
+      title: 'Frozen',
       description: 'Fresh frozen tissue samples maintained at optimal temperatures to preserve molecular integrity.',
-      features: ['Cryopreserved', 'Molecular analysis ready', 'Protein preservation', 'Quality assured'],
+      features: ['Subtype 1', 'Subtype 2', 'Molecular analysis ready', 'Protein preservation'],
     },
     {
-      title: 'Normal Adjacent Tissues',
-      description: 'Healthy tissue samples adjacent to diseased areas, essential for comparative studies.',
-      features: ['Matched pairs available', 'Control samples', 'Comparative analysis', 'Research grade'],
+      title: 'Cryopreserved',
+      description: 'Cryopreserved tissue samples supporting cellular and molecular research applications.',
+      features: ['Subtype 1', 'Subtype 2', 'Viability preserved', 'Research ready'],
+    },
+    {
+      title: 'Healthy Tissues',
+      description: 'Healthy tissue samples for comparative studies and control cohorts.',
+      features: ['Healthy Donors', 'Control samples', 'Comparative analysis', 'Research grade'],
     },
     {
       title: 'Diseased Tissues',
       description: 'Pathologically confirmed diseased tissue samples with comprehensive clinical data.',
       features: ['Pathology confirmed', 'Clinical data included', 'Multiple disease types', 'Research ready'],
+    },
+    {
+      title: 'Extracted DNA',
+      description: 'High-quality extracted DNA prepared for genomic and molecular research workflows.',
+      features: ['Assay-ready', 'Quality verified', 'Quantified yields', 'Research grade'],
+    },
+    {
+      title: 'Extracted RNA',
+      description: 'High-quality extracted RNA prepared for transcriptomic and molecular research workflows.',
+      features: ['Assay-ready', 'Quality verified', 'Integrity assessed', 'Research grade'],
     },
   ];
 
@@ -60,7 +75,7 @@ export default function TissueSamples() {
       {/* Content Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {sampleTypes.map((type, index) => (
               <motion.div
                 key={index}

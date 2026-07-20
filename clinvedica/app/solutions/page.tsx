@@ -9,21 +9,21 @@ export default function Solutions() {
   const services = [
     {
       title: 'Tissue Samples',
-      description: 'FFPE, Frozen, Normal Adjacent, and Diseased Tissues — high-quality, ethically sourced, and ideal for a wide range of research applications.',
+      description: 'FFPE, Frozen, Cryopreserved, Healthy, and Diseased Tissues — plus Extracted DNA and RNA — high-quality, ethically sourced, and ideal for a wide range of research applications.',
       href: '/solutions/tissue-samples',
-      features: ['FFPE Blocks', 'Frozen Tissues', 'Normal Adjacent', 'Diseased Tissues', 'Comprehensive Data'],
+      features: ['FFPE (2 subtypes)', 'Frozen (2 subtypes)', 'Cryopreserved (2 subtypes)', 'Healthy Tissues & Healthy Donors', 'Extracted DNA & RNA'],
     },
     {
       title: 'Blood & Derivatives',
-      description: 'Serum, Plasma, Buffy Coat, Whole Blood, PBMC, BMMNC — handled with precision to ensure maximum sample integrity.',
+      description: 'Serum, Plasma, Buffy Coat, Whole Blood, PBMC, Bone Marrow, BMMNC — handled with precision to ensure maximum sample integrity.',
       href: '/solutions/blood-derivatives',
-      features: ['Serum & Plasma', 'Buffy Coat', 'PBMC', 'BMMNC', 'Whole Blood'],
+      features: ['Serum & Plasma', 'Buffy Coat', 'PBMC', 'Bone Marrow', 'BMMNC', 'Whole Blood'],
     },
     {
       title: 'Biofluids',
       description: 'Urine, Saliva, CSF, Synovial Fluid, Ascites, Aqueous Humour, and more — verified and ready to support your specific study needs.',
       href: '/solutions/biofluids',
-      features: ['Urine & Saliva', 'CSF', 'Synovial Fluid', 'Ascites', 'Aqueous Humour'],
+      features: ['Urine & Saliva', 'CSF', 'Synovial Fluid', 'Ascites', 'Others: sputum, semen, cord blood, tears'],
     },
     {
       title: 'Matched Set Biospecimens',

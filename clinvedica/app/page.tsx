@@ -62,27 +62,138 @@ export default function Home() {
   const services = [
     {
       title: 'Tissue Samples',
-      description: 'FFPE, frozen, normal adjacent, and diseased tissues that support histology, IHC, molecular profiling, and biomarker discovery. Ideal for translational research, companion diagnostics development, and validation of tissue-based assays.',
+      description: 'FFPE, frozen, cryopreserved, healthy, and diseased tissues that support histology, IHC, molecular profiling, and biomarker discovery—plus extracted DNA and RNA. Ideal for translational research, companion diagnostics development, and validation of tissue-based assays.',
       href: '/solutions/tissue-samples',
-      features: ['FFPE blocks & curls', 'Frozen tissues', 'Normal adjacent & control tissues', 'Tumor subtype-specific collections', 'Use cases: IHC, NGS, biomarker validation'],
+      features: ['FFPE, Frozen & Cryopreserved (2 subtypes each)', 'Healthy Tissues & Healthy Donors', 'Diseased tissues', 'Extracted DNA & Extracted RNA', 'Use cases: IHC, NGS, biomarker validation'],
     },
     {
       title: 'Blood & Derivatives',
-      description: 'Serum, plasma, buffy coat, whole blood, PBMC, and BMMNC collected under controlled pre-analytical conditions. Ideal for biomarker discovery, immunophenotyping, genomics, and longitudinal monitoring studies.',
+      description: 'Serum, plasma, buffy coat, whole blood, PBMC, bone marrow, and BMMNC collected under controlled pre-analytical conditions. Ideal for biomarker discovery, immunophenotyping, genomics, and longitudinal monitoring studies.',
       href: '/solutions/blood-derivatives',
-      features: ['Serum & plasma panels', 'Buffy coat & whole blood', 'PBMC & BMMNC', 'Stabilized and fresh collections', 'Use cases: flow cytometry, NGS, cytokine profiling'],
+      features: ['Serum & plasma panels', 'Buffy coat & whole blood', 'PBMC, Bone Marrow & BMMNC', 'Stabilized and fresh collections', 'Use cases: flow cytometry, NGS, cytokine profiling'],
     },
     {
       title: 'Biofluids',
       description: 'Urine, saliva, CSF, synovial fluid, ascites, aqueous humour, and other matrices to support non-invasive and minimally invasive studies. Ideal for early detection, pharmacodynamic markers, and multi-omics workflows.',
       href: '/solutions/biofluids',
-      features: ['Urine & saliva', 'CSF & synovial fluid', 'Ascites & other specialized fluids', 'Aliquoting & storage options', 'Use cases: metabolomics, proteomics, liquid biopsy'],
+      features: ['Urine & saliva', 'CSF & synovial fluid', 'Ascites & aqueous humour', 'Others: sputum, semen, cord blood, tears', 'Use cases: metabolomics, proteomics, liquid biopsy'],
     },
     {
       title: 'Matched Set Biospecimens',
       description: 'Integrated access to tissue, blood, and other biospecimens from the same donor, strengthening correlations across modalities. Ideal for longitudinal studies, multi-omics projects, and precision medicine programs.',
       href: '/solutions/matched-sets',
       features: ['Same-donor tissue & blood', 'Multiple timepoints where feasible', 'Linked clinical & pathological data', 'Use cases: multi-omics, precision medicine, translational cohorts'],
+    },
+  ];
+
+  const pastIndications = [
+    {
+      title: 'Oncology',
+      items: [
+        'Lung',
+        'Breast',
+        'Stomach',
+        'Kidney',
+        'Liver',
+        'Ovary',
+        'Lymphoma',
+        'Head and Neck',
+        'Esophagus',
+        'Cervical',
+        'Leukemia',
+        'Uterine',
+      ],
+    },
+    {
+      title: 'Autoimmune Disorders',
+      items: [
+        'Rheumatoid Arthritis',
+        'SLE (Systemic Lupus Erythematosus)',
+        "Sjögren's Syndrome",
+        'Lupus Nephritis',
+        'Polymyositis',
+        'Dermatomyositis',
+        'Systemic Sclerosis',
+        'CREST Syndrome',
+        'Mixed Connective Tissue Disease (MCTD)',
+      ],
+    },
+    {
+      title: 'Urology',
+      items: [
+        'Benign Prostatic Hyperplasia (BPH)',
+        'Urinary Tract Infections (UTIs)',
+        'Endometriosis',
+      ],
+    },
+    {
+      title: 'Dermatology',
+      items: [
+        'Hidradenitis Suppurativa',
+        'Psoriasis',
+        'Atopic Dermatitis',
+        'Scleroderma',
+        'Vitiligo',
+        'Alopecia',
+        'Eczema',
+      ],
+    },
+    {
+      title: 'Infectious Diseases',
+      items: [
+        'HIV-1',
+        'HIV-2',
+        'Hepatitis B',
+        'Hepatitis C',
+        'Bacterial and Viral Infections',
+        'Syphilis',
+        'Gonorrhea',
+        'Respiratory Syncytial Virus (RSV)',
+        'Influenza A & B',
+        'Pseudomonas',
+        'Salmonella',
+        'Bordetella',
+        '...and many more.',
+      ],
+    },
+    {
+      title: 'Cardiology',
+      items: [
+        'Heart Attack (Myocardial Infarction)',
+        'Stroke',
+        'Heart Failure',
+        'Dilated Cardiomyopathy',
+        'Cardiac Amyloidosis (Amyloid Cardiomyopathy)',
+        'Coronary Heart Disease',
+        'Arrhythmia',
+      ],
+    },
+    {
+      title: 'Respiratory Disorders',
+      items: [
+        'Idiopathic Pulmonary Fibrosis (IPF)',
+        'Asthma',
+        'Tuberculosis (TB)',
+        'Interstitial Lung Disease (ILD)',
+        'Bronchitis',
+      ],
+    },
+    {
+      title: 'Nephrology',
+      items: [
+        'Lupus Nephritis',
+        'Nephrotic Syndrome',
+        'Kidney Failure',
+        'Kidney Stones',
+        'Chronic Kidney Disease (CKD)',
+        'IgA Nephropathy (IgAN)',
+        'ADPKD (Autosomal Dominant Polycystic Kidney Disease)',
+        'PKD (Polycystic Kidney Disease)',
+        'PMN (Primary Membranous Nephropathy)',
+        'DKD (Diabetic Kidney Disease)',
+        'C3G (C3 Glomerulopathy)',
+        'CAMR (Chronic Antibody-Mediated Rejection)',
+      ],
     },
   ];
 
@@ -137,7 +248,7 @@ export default function Home() {
               Delivering Quality Human Biospecimens Worldwide
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Bridging the gap between ambitious research questions and precisely characterized human biospecimens.
+              Bridging the gap between ambitious research questions and data-rich human biospecimens.
             </p>
           </motion.div>
 
@@ -145,7 +256,8 @@ export default function Home() {
             <div className="space-y-4 text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
               <p>
                 Clin Vedica Life Sciences is a specialist biospecimen partner dedicated to advancing global biomedical research. 
-                We recognize that high-quality, deeply annotated human biospecimens are the foundation of robust discovery, validation, and diagnostic development.
+                We recognize that high-quality, data-rich human biospecimens are the foundation of robust discovery, validation, and diagnostic development—
+                across oncology and non-oncology indications, including autoimmune diseases.
               </p>
               <p>
                 We work with pharmaceutical and biotechnology companies, diagnostics developers, and academic laboratories to provide retrospective collections, 
@@ -206,17 +318,25 @@ export default function Home() {
               Clin Vedica in Numbers
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A growing network, expanding inventory, and deepening therapeutic area experience.
+              Data-rich human biospecimens across oncology and non-oncology indications, including autoimmune diseases—
+              backed by a growing network and expanding inventory.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
             <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100 flex flex-col items-center">
               <p className="text-4xl font-extrabold text-primary-600 mb-2">50+</p>
               <p className="text-gray-700 font-semibold mb-1">Partner Institutions</p>
               <p className="text-gray-500 text-sm">
                 Hospitals, clinics, labs, and collection centers across India, with the ability to support regional and
                 global projects.
+              </p>
+            </div>
+            <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100 flex flex-col items-center">
+              <p className="text-4xl font-extrabold text-primary-600 mb-2">8+</p>
+              <p className="text-gray-700 font-semibold mb-1">Global Network</p>
+              <p className="text-gray-500 text-sm">
+                International reach through trusted partners supporting multi-region biospecimen programs.
               </p>
             </div>
             <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100 flex flex-col items-center">
@@ -324,6 +444,49 @@ export default function Home() {
             >
               Explore Therapeutic Areas
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Indications Covered */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Indications Covered
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Common Disease Indications Worked on in the Past
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {pastIndications.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{category.title}</h3>
+                <ul className="space-y-1.5">
+                  {category.items.map((item) => (
+                    <li key={item} className="text-sm text-gray-600 flex items-start">
+                      <span className="text-primary-600 mr-2">•</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

@@ -145,48 +145,46 @@ export default function About() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-xl p-6 shadow-lg"
-            >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Dedicated Support</h3>
-              <p className="text-gray-600">
-                Every project is assigned a dedicated project manager who serves as your single point of contact, 
-                ensuring seamless communication and timely updates throughout the process.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white rounded-xl p-6 shadow-lg"
-            >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Comprehensive Data</h3>
-              <p className="text-gray-600">
-                Access to comprehensive, de-identified clinical, pathological, and demographic data to enrich 
-                your biospecimen research and enhance study outcomes.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-xl p-6 shadow-lg"
-            >
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Flexible Solutions</h3>
-              <p className="text-gray-600">
-                Tailored procurement solutions designed to meet your specific research requirements, 
-                timelines, and budget constraints.
-              </p>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Advanced lab infrastructure',
+                description:
+                  'Access to advanced laboratory infrastructure supporting high-quality biospecimen processing, storage, and assay-ready outputs.',
+              },
+              {
+                title: 'Partnership capabilities',
+                description:
+                  'Strong partnership capabilities across hospitals, research centers, and global collaborators to support complex study needs.',
+              },
+              {
+                title: 'Global research and engagement',
+                description:
+                  'Active global research engagement enabling diverse cohorts and multi-region biospecimen programs.',
+              },
+              {
+                title: 'Feasibility turnaround: 1–2 days',
+                description:
+                  'Rapid feasibility assessments with typical turnaround of 1–2 days so your team can move from inquiry to decision quickly.',
+              },
+              {
+                title: 'Questionnaires, where required',
+                description:
+                  'Study-specific questionnaires and data capture support where required to align collections with protocol endpoints.',
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-xl p-6 shadow-lg"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
