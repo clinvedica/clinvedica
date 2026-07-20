@@ -23,6 +23,7 @@ export default function Footer() {
             </Link>
             <p className="text-sm text-gray-300">
               Powering Discovery with Ethical, Compliant, and Tailored Biospecimen Solutions.
+              Based in Jalandhar, Punjab, India — serving research partners worldwide.
             </p>
             <div className="flex space-x-4">
               <a

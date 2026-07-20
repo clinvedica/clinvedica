@@ -9,14 +9,14 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Clin Vedica Life Sciences",
     short_name: "Clin Vedica",
     description:
-      "Ethical, Compliant, and Tailored Biospecimen Solutions for Global Biomedical Research.",
+      "Clin Vedica Life Sciences in Jalandhar, Punjab, India — ethical, compliant biospecimen solutions for global biomedical research.",
     start_url: "/",
     display: "standalone",
     orientation: "portrait-primary",
     background_color: "#1a0505",
     theme_color: "#A32626",
     scope: "/",
-    lang: "en",
+    lang: "en-IN",
     categories: ["health", "science", "business"],
     icons: [
       {

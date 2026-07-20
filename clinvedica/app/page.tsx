@@ -89,6 +89,7 @@ export default function Home() {
   const pastIndications = [
     {
       title: 'Oncology',
+      href: '/therapeutic-area/oncology',
       items: [
         'Lung',
         'Breast',
@@ -106,6 +107,7 @@ export default function Home() {
     },
     {
       title: 'Autoimmune Disorders',
+      href: '/therapeutic-area/autoimmune',
       items: [
         'Rheumatoid Arthritis',
         'SLE (Systemic Lupus Erythematosus)',
@@ -120,6 +122,7 @@ export default function Home() {
     },
     {
       title: 'Urology',
+      href: '/therapeutic-area/urology',
       items: [
         'Benign Prostatic Hyperplasia (BPH)',
         'Urinary Tract Infections (UTIs)',
@@ -128,6 +131,7 @@ export default function Home() {
     },
     {
       title: 'Dermatology',
+      href: '/therapeutic-area/dermatology',
       items: [
         'Hidradenitis Suppurativa',
         'Psoriasis',
@@ -140,6 +144,7 @@ export default function Home() {
     },
     {
       title: 'Infectious Diseases',
+      href: '/therapeutic-area/infectious-diseases',
       items: [
         'HIV-1',
         'HIV-2',
@@ -158,6 +163,7 @@ export default function Home() {
     },
     {
       title: 'Cardiology',
+      href: '/therapeutic-area/cardiology',
       items: [
         'Heart Attack (Myocardial Infarction)',
         'Stroke',
@@ -170,6 +176,7 @@ export default function Home() {
     },
     {
       title: 'Respiratory Disorders',
+      href: '/therapeutic-area/respiratory',
       items: [
         'Idiopathic Pulmonary Fibrosis (IPF)',
         'Asthma',
@@ -180,6 +187,7 @@ export default function Home() {
     },
     {
       title: 'Nephrology',
+      href: '/therapeutic-area/nephrology',
       items: [
         'Lupus Nephritis',
         'Nephrotic Syndrome',
@@ -255,7 +263,8 @@ export default function Home() {
           <div className="bg-gradient-to-br from-primary-50 to-teal-50 rounded-2xl p-8 md:p-12">
             <div className="space-y-4 text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
               <p>
-                Clin Vedica Life Sciences is a specialist biospecimen partner dedicated to advancing global biomedical research. 
+                Clin Vedica Life Sciences is a specialist biospecimen partner based in Jalandhar, Punjab, India,
+                dedicated to advancing global biomedical research. 
                 We recognize that high-quality, data-rich human biospecimens are the foundation of robust discovery, validation, and diagnostic development—
                 across oncology and non-oncology indications, including autoimmune diseases.
               </p>
@@ -474,9 +483,13 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{category.title}</h3>
+                <Link href={category.href} className="block group">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-primary-600 transition-colors">
+                    {category.title}
+                  </h3>
+                </Link>
                 <ul className="space-y-1.5">
                   {category.items.map((item) => (
                     <li key={item} className="text-sm text-gray-600 flex items-start">
@@ -485,6 +498,12 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+                <Link
+                  href={category.href}
+                  className="inline-flex items-center mt-4 text-sm font-semibold text-primary-600 hover:text-teal-600 transition-colors"
+                >
+                  View details
+                </Link>
               </motion.div>
             ))}
           </div>

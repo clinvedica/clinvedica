@@ -67,7 +67,7 @@ export default function Contact() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
-              Get in touch with our team to discuss your biospecimen requirements
+              Get in touch with our Jalandhar, Punjab team to discuss your biospecimen requirements
             </p>
           </motion.div>
         </div>

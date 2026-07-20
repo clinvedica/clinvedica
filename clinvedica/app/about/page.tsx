@@ -44,7 +44,7 @@ export default function About() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
-              Bridging the Gap Between Critical Research Needs and Quality Biospecimens
+              Bridging the Gap Between Critical Research Needs and Quality Biospecimens from Jalandhar, Punjab, India
             </p>
           </motion.div>
         </div>
@@ -64,7 +64,8 @@ export default function About() {
                 Advancing Global Biomedical Research
               </h2>
               <p className="text-lg text-gray-600 mb-4 leading-relaxed">
-                Clin Vedica Life Sciences is a premier biospecimens procurement organization dedicated to advancing global biomedical research. 
+                Clin Vedica Life Sciences is a premier biospecimens procurement organization based in Jalandhar, Punjab, India,
+                dedicated to advancing global biomedical research.
                 We understand the critical role that high-quality, well-characterized human biospecimens play in the development of new diagnostics, 
                 therapeutics and drug discovery.
               </p>

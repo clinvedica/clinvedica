@@ -11,6 +11,38 @@ const DEFAULT_SITE_URL = "https://clinvedica.com";
 export const OFFICE_ADDRESS =
   "C-2, Sunshine Valley, Suchi Pind, Jalandhar, Punjab 144007, India";
 
+export const OFFICE_CITY = "Jalandhar";
+export const OFFICE_REGION = "Punjab";
+export const OFFICE_COUNTRY = "India";
+export const OFFICE_POSTAL_CODE = "144007";
+export const OFFICE_STREET = "C-2, Sunshine Valley, Suchi Pind";
+
+/** Shared location SEO phrases (use naturally in metadata/copy). */
+export const LOCATION_SEO_PHRASE =
+  "based in Jalandhar, Punjab, India";
+
+export const DEFAULT_SEO_DESCRIPTION =
+  "Clin Vedica Life Sciences in Jalandhar, Punjab, India — ethical, compliant biospecimen solutions for global biomedical research. Tissue samples, blood derivatives, biofluids, and matched sets across oncology and non-oncology indications.";
+
+export const DEFAULT_SEO_KEYWORDS = [
+  "biospecimens",
+  "biospecimen company India",
+  "biospecimen supplier Jalandhar",
+  "biospecimen procurement Punjab",
+  "human biospecimens India",
+  "tissue samples India",
+  "blood derivatives",
+  "biofluids",
+  "FFPE",
+  "frozen tissue",
+  "PBMC",
+  "clinical research India",
+  "biomedical research Punjab",
+  "life sciences Jalandhar",
+  "Clin Vedica Life Sciences",
+  "Clin Vedica Jalandhar",
+] as const;
+
 /** Opens Google Maps with directions to the exact office address. */
 export const GOOGLE_MAPS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
   OFFICE_ADDRESS

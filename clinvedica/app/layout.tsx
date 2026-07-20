@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { FAVICON_PATH, getSiteUrl } from "@/lib/site";
+import { FAVICON_PATH, DEFAULT_SEO_DESCRIPTION, DEFAULT_SEO_KEYWORDS, getSiteUrl } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,25 +30,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: "Clin Vedica Life Sciences",
   title: {
-    default: "Clin Vedica Life Sciences - Powering Discovery",
-    template: "%s | Clin Vedica Life Sciences",
+    default:
+      "Clin Vedica Life Sciences | Biospecimen Solutions in Jalandhar, Punjab, India",
+    template: "%s | Clin Vedica Life Sciences Jalandhar",
   },
-  description:
-    "Ethical, Compliant, and Tailored Biospecimen Solutions for Global Biomedical Research. Tissue samples, blood derivatives, biofluids, and matched sets for oncology, infectious disease, and more.",
-  keywords: [
-    "biospecimens",
-    "tissue samples",
-    "blood derivatives",
-    "biofluids",
-    "life sciences",
-    "clinical research",
-    "biomedical research",
-    "FFPE",
-    "frozen tissue",
-    "serum plasma",
-    "PBMC",
-    "India biospecimens",
-  ],
+  description: DEFAULT_SEO_DESCRIPTION,
+  keywords: [...DEFAULT_SEO_KEYWORDS],
   authors: [{ name: "Clin Vedica Life Sciences", url: siteUrl }],
   creator: "Clin Vedica Life Sciences",
   publisher: "Clin Vedica Life Sciences",
@@ -82,29 +69,35 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: "Clin Vedica Life Sciences",
-    title: "Clin Vedica Life Sciences - Powering Discovery",
-    description:
-      "Ethical, Compliant, and Tailored Biospecimen Solutions for Global Biomedical Research.",
+    title:
+      "Clin Vedica Life Sciences | Biospecimen Solutions in Jalandhar, Punjab, India",
+    description: DEFAULT_SEO_DESCRIPTION,
     images: [
       {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Clin Vedica Life Sciences - Biospecimen Solutions for Research",
+        alt: "Clin Vedica Life Sciences - Biospecimen Solutions from Jalandhar, Punjab, India",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clin Vedica Life Sciences - Powering Discovery",
-    description:
-      "Ethical, Compliant, and Tailored Biospecimen Solutions for Global Biomedical Research.",
+    title:
+      "Clin Vedica Life Sciences | Biospecimen Solutions in Jalandhar, Punjab",
+    description: DEFAULT_SEO_DESCRIPTION,
     images: ["/logo.png"],
   },
   alternates: {
     canonical: siteUrl,
   },
   category: "Health & Life Sciences",
+  other: {
+    "geo.region": "IN-PB",
+    "geo.placename": "Jalandhar, Punjab, India",
+    "geo.position": "31.3260;75.5762",
+    ICBM: "31.3260, 75.5762",
+  },
 };
 
 export default function RootLayout({

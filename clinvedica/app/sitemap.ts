@@ -51,6 +51,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       ...base,
     },
+    ...[
+      'oncology',
+      'autoimmune',
+      'urology',
+      'dermatology',
+      'infectious-diseases',
+      'cardiology',
+      'respiratory',
+      'nephrology',
+      'cardiovascular',
+    ].map((slug) => ({
+      url: `${siteUrl}/therapeutic-area/${slug}`,
+      lastModified: new Date(),
+      ...base,
+    })),
     {
       url: `${siteUrl}/capabilities`,
       lastModified: new Date(),
