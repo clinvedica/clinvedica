@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FiMail, FiPhone, FiMapPin, FiLinkedin } from 'react-icons/fi';
+import { FiMail, FiMapPin, FiLinkedin } from 'react-icons/fi';
 import FooterContactForm from './FooterContactForm';
 import BrandLogo from './BrandLogo';
 import { GOOGLE_MAPS_URL, OFFICE_ADDRESS } from '@/lib/site';
@@ -115,12 +115,6 @@ export default function Footer() {
                   aria-label="Get directions to Clin Vedica office in Google Maps"
                 >
                   {OFFICE_ADDRESS}
-                </a>
-              </li>
-              <li className="flex items-center space-x-3">
-                <FiPhone className="text-primary-400" size={18} />
-                <a href="tel:+917009810865" className="hover:text-primary-400 transition-colors">
-                  +91-7009810865
                 </a>
               </li>
               <li className="flex items-center space-x-3">

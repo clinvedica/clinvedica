@@ -34,6 +34,6 @@ export const animalSpeciesGroups: AnimalSpeciesGroup[] = [
   },
   {
     name: 'Birds',
-    strains: ['Pigeon', 'Chicken'],
+    strains: ['Pigeon', 'Chicken', 'and many more'],
   },
 ];

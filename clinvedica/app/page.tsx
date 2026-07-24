@@ -336,7 +336,7 @@ export default function Home() {
               </p>
             </div>
             <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100 flex flex-col items-center">
-              <p className="text-4xl font-extrabold text-primary-600 mb-2">15+</p>
+              <p className="text-4xl font-extrabold text-primary-600 mb-2">10+</p>
               <p className="text-gray-700 font-semibold mb-1">Therapeutic Areas</p>
               <p className="text-gray-500 text-sm">
                 Oncology, infectious diseases, metabolic/endocrine, autoimmune, and more as our network expands.

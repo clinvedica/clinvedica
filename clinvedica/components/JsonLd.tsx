@@ -37,7 +37,6 @@ const organizationSchema = {
   contactPoint: [
     {
       "@type": "ContactPoint",
-      telephone: "+91-7009810865",
       email: "pankaj@clinvedicalifesciences.com",
       contactType: "customer service",
       areaServed: ["IN", "Worldwide"],
@@ -109,7 +108,6 @@ const localBusinessSchema = {
   "@id": `${siteUrl}/#localbusiness`,
   name: "Clin Vedica Life Sciences",
   url: siteUrl,
-  telephone: "+91-7009810865",
   email: "pankaj@clinvedicalifesciences.com",
   description: DEFAULT_SEO_DESCRIPTION,
   address: {

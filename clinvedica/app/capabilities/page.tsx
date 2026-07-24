@@ -175,7 +175,7 @@ export default function CapabilitiesPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="bg-white rounded-2xl shadow-md border border-gray-100 p-6"
             >
-              <p className="text-3xl font-extrabold text-primary-600 mb-1">5+</p>
+              <p className="text-3xl font-extrabold text-primary-600 mb-1">10+</p>
               <p className="text-sm font-semibold text-gray-800 mb-1">Therapeutic Areas</p>
               <p className="text-xs text-gray-500">Oncology, infectious, metabolic, autoimmune, and more.</p>
             </motion.div>

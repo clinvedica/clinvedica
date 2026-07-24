@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiClock } from 'react-icons/fi';
+import { FiMail, FiMapPin, FiClock } from 'react-icons/fi';
 import { GOOGLE_MAPS_EMBED_URL, GOOGLE_MAPS_URL, OFFICE_ADDRESS } from '@/lib/site';
 
 export default function Contact() {
@@ -18,15 +18,6 @@ export default function Contact() {
           aria-label="Get directions to Clin Vedica office in Google Maps"
         >
           {OFFICE_ADDRESS}
-        </a>
-      ),
-    },
-    {
-      icon: <FiPhone size={24} />,
-      title: 'Phone',
-      content: (
-        <a href="tel:+917009810865" className="hover:text-primary-600 transition-colors">
-          +91-7009810865
         </a>
       ),
     },

@@ -9,12 +9,12 @@ const DEFAULT_SITE_URL = "https://clinvedica.com";
 
 /** Exact office address used across the site and Google Maps. */
 export const OFFICE_ADDRESS =
-  "C-2, Sunshine Valley, Suchi Pind, Jalandhar, Punjab 144007, India";
+  "C-2, Sunshine Valley, Suchi Pind, Jalandhar, Punjab 144001, India";
 
 export const OFFICE_CITY = "Jalandhar";
 export const OFFICE_REGION = "Punjab";
 export const OFFICE_COUNTRY = "India";
-export const OFFICE_POSTAL_CODE = "144007";
+export const OFFICE_POSTAL_CODE = "144001";
 export const OFFICE_STREET = "C-2, Sunshine Valley, Suchi Pind";
 
 /** Shared location SEO phrases (use naturally in metadata/copy). */
