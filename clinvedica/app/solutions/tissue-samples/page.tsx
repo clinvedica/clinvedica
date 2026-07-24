@@ -9,35 +9,25 @@ export default function TissueSamples() {
     {
       title: 'FFPE',
       description: 'Formalin-Fixed Paraffin-Embedded tissue samples preserved for long-term storage and analysis.',
-      features: ['Subtype 1', 'Subtype 2', 'Ideal for IHC', 'DNA/RNA extraction'],
+      features: ['Diseased ', 'Healthy / NAT', 'Ideal for IHC', 'DNA/RNA extraction'],
     },
     {
       title: 'Frozen',
       description: 'Fresh frozen tissue samples maintained at optimal temperatures to preserve molecular integrity.',
-      features: ['Subtype 1', 'Subtype 2', 'Molecular analysis ready', 'Protein preservation'],
+      features: ['Diseased ', 'Healthy / NAT', 'Molecular analysis ready', 'Protein preservation'],
     },
     {
       title: 'Cryopreserved',
       description: 'Cryopreserved tissue samples supporting cellular and molecular research applications.',
-      features: ['Subtype 1', 'Subtype 2', 'Viability preserved', 'Research ready'],
+      features: ['Diseased ', 'Healthy / NAT', 'Viability preserved', 'Research ready'],
     },
     {
-      title: 'Healthy Tissues',
-      description: 'Healthy tissue samples for comparative studies and control cohorts.',
-      features: ['Healthy Donors', 'Control samples', 'Comparative analysis', 'Research grade'],
-    },
-    {
-      title: 'Diseased Tissues',
-      description: 'Pathologically confirmed diseased tissue samples with comprehensive clinical data.',
-      features: ['Pathology confirmed', 'Clinical data included', 'Multiple disease types', 'Research ready'],
-    },
-    {
-      title: 'Extracted DNA',
+      title: 'Extracted DNA From Tissue',
       description: 'High-quality extracted DNA prepared for genomic and molecular research workflows.',
       features: ['Assay-ready', 'Quality verified', 'Quantified yields', 'Research grade'],
     },
     {
-      title: 'Extracted RNA',
+      title: 'Extracted RNA From Tissue',
       description: 'High-quality extracted RNA prepared for transcriptomic and molecular research workflows.',
       features: ['Assay-ready', 'Quality verified', 'Integrity assessed', 'Research grade'],
     },

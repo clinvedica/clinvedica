@@ -13,7 +13,7 @@ const faqs: FAQ[] = [
   {
     question: 'What types of biospecimens can Clin Vedica provide?',
     answer:
-      'We support a broad range of human biospecimens including FFPE, frozen, and cryopreserved tissues (with subtypes), healthy tissues from healthy donors, extracted DNA and RNA, whole blood and derivatives (serum, plasma, PBMCs, bone marrow, BMMNCs), and multiple biofluids such as urine, saliva, CSF, synovial fluid, ascites, aqueous humour, sputum, semen, cord blood, and tears.',
+      'We support a broad range of human biospecimens including FFPE, frozen, and cryopreserved tissues, healthy tissues from healthy donors, extracted DNA and RNA, whole blood and derivatives (serum, plasma, PBMCs), and multiple biofluids such as urine, saliva, CSF, synovial fluid, ascites, aqueous humour, bone marrow, BMMNC, sputum, semen, cord blood, and tears.',
   },
   {
     question: 'How long does a typical feasibility assessment take?',

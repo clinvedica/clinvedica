@@ -41,8 +41,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-base md:text-lg text-gray-600 mb-8"
           >
-            From retrospective collections to prospective recruitment and matched donor sets, we enable translational discovery across oncology,
-            infectious diseases, metabolic disorders, and more—under rigorous ethical, regulatory, and biosafety frameworks.
+            From retrospective collections to prospective recruitment and matched donor sets, we enable translational discovery across oncology, non oncology, autoimmune diseases, infectious diseases, metabolic disorders, and more—under rigorous ethical, regulatory, and biosafety frameworks.
           </motion.p>
 
           <motion.div

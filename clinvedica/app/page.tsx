@@ -10,13 +10,19 @@ import {
   FiTarget, 
   FiUsers, 
   FiTruck,
-  FiCheckCircle
+  FiCheckCircle,
+  FiUserCheck
 } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function Home() {
   const features = [
+    {
+      icon: <FiUserCheck />,
+      title: 'One Point Contact',
+      description: "You'll work with a dedicated project manager—your single point of contact for feasibility, timelines, and risk mitigation throughout the project.",
+    },
     {
       icon: <FiShield />,
       title: 'Uncompromised Quality',
@@ -64,19 +70,19 @@ export default function Home() {
       title: 'Tissue Samples',
       description: 'FFPE, frozen, cryopreserved, healthy, and diseased tissues that support histology, IHC, molecular profiling, and biomarker discovery—plus extracted DNA and RNA. Ideal for translational research, companion diagnostics development, and validation of tissue-based assays.',
       href: '/solutions/tissue-samples',
-      features: ['FFPE, Frozen & Cryopreserved (2 subtypes each)', 'Healthy Tissues & Healthy Donors', 'Diseased tissues', 'Extracted DNA & Extracted RNA', 'Use cases: IHC, NGS, biomarker validation'],
+      features: ['FFPE, Frozen & Cryopreserved', 'Healthy Tissues & Healthy Donors', 'Diseased tissues', 'Extracted DNA & Extracted RNA', 'Use cases: IHC, NGS, biomarker validation'],
     },
     {
       title: 'Blood & Derivatives',
-      description: 'Serum, plasma, buffy coat, whole blood, PBMC, bone marrow, and BMMNC collected under controlled pre-analytical conditions. Ideal for biomarker discovery, immunophenotyping, genomics, and longitudinal monitoring studies.',
+      description: 'Serum, plasma, buffy coat, whole blood, and PBMC collected under controlled pre-analytical conditions. Ideal for biomarker discovery, immunophenotyping, genomics, and longitudinal monitoring studies.',
       href: '/solutions/blood-derivatives',
-      features: ['Serum & plasma panels', 'Buffy coat & whole blood', 'PBMC, Bone Marrow & BMMNC', 'Stabilized and fresh collections', 'Use cases: flow cytometry, NGS, cytokine profiling'],
+      features: ['Serum & plasma panels', 'Buffy coat & whole blood', 'PBMC', 'Stabilized and fresh collections', 'Use cases: flow cytometry, NGS, cytokine profiling'],
     },
     {
       title: 'Biofluids',
-      description: 'Urine, saliva, CSF, synovial fluid, ascites, aqueous humour, and other matrices to support non-invasive and minimally invasive studies. Ideal for early detection, pharmacodynamic markers, and multi-omics workflows.',
+      description: 'Urine, saliva, CSF, synovial fluid, ascites, aqueous humour, bone marrow, BMMNC, and other matrices to support non-invasive and specialized studies. Ideal for early detection, pharmacodynamic markers, and multi-omics workflows.',
       href: '/solutions/biofluids',
-      features: ['Urine & saliva', 'CSF & synovial fluid', 'Ascites & aqueous humour', 'Others: sputum, semen, cord blood, tears', 'Use cases: metabolomics, proteomics, liquid biopsy'],
+      features: ['Urine & saliva', 'CSF & synovial fluid', 'Bone Marrow & BMMNC', 'Others: sputum, semen, cord blood, tears', 'Use cases: metabolomics, proteomics, liquid biopsy'],
     },
     {
       title: 'Matched Set Biospecimens',

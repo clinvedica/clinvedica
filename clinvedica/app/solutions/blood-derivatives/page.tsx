@@ -22,16 +22,6 @@ export default function BloodDerivatives() {
       features: ['Cryopreserved', 'Viability tested', 'Immunology ready', 'Multiple donors'],
     },
     {
-      title: 'Bone Marrow',
-      description: 'Bone marrow samples for hematological, stem cell, and translational research applications.',
-      features: ['Hematology research', 'Stem cell studies', 'Quality assured', 'Clinical data'],
-    },
-    {
-      title: 'BMMNC',
-      description: 'Bone Marrow Mononuclear Cells for advanced hematological and stem cell research applications.',
-      features: ['Stem cell research', 'Hematology studies', 'Quality assured', 'Comprehensive data'],
-    },
-    {
       title: 'Whole Blood',
       description: 'Fresh whole blood samples collected in various anticoagulants for diverse research needs.',
       features: ['Multiple anticoagulants', 'Fresh collection', 'Multiple volumes', 'Research ready'],

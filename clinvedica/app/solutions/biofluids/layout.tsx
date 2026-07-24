@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Biofluids',
   description:
-    'Urine, saliva, CSF, synovial fluid, ascites. Non-invasive and minimally invasive biospecimens for metabolomics and liquid biopsy.',
+    'Urine, saliva, CSF, synovial fluid, ascites, bone marrow, BMMNC. Non-invasive and specialized biospecimens for metabolomics, liquid biopsy, and translational research.',
 };
 
 export default function BiofluidsLayout({

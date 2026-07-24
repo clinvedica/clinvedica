@@ -37,6 +37,16 @@ export default function Biofluids() {
       features: ['Ophthalmology research', 'Biomarker discovery', 'Quality tested', 'Research grade'],
     },
     {
+      title: 'Bone Marrow',
+      description: 'Bone marrow samples for hematological, stem cell, and translational research applications.',
+      features: ['Hematology research', 'Stem cell studies', 'Quality assured', 'Clinical data'],
+    },
+    {
+      title: 'BMMNC',
+      description: 'Bone Marrow Mononuclear Cells for advanced hematological and stem cell research applications.',
+      features: ['Stem cell research', 'Hematology studies', 'Quality assured', 'Comprehensive data'],
+    },
+    {
       title: 'Others',
       description: 'Additional specialized biofluids to support diverse research applications and study designs.',
       features: ['Sputum', 'Semen', 'Cord blood', 'Tears'],
