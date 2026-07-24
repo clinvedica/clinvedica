@@ -47,6 +47,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...base,
     },
     {
+      url: `${siteUrl}/solutions/animal-tissue-samples`,
+      lastModified: new Date(),
+      ...base,
+    },
+    {
+      url: `${siteUrl}/solutions/animal-blood-biofluids`,
+      lastModified: new Date(),
+      ...base,
+    },
+    {
       url: `${siteUrl}/therapeutic-area`,
       lastModified: new Date(),
       ...base,

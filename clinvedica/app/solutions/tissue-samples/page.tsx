@@ -22,6 +22,12 @@ export default function TissueSamples() {
       features: ['Diseased ', 'Healthy / NAT', 'Viability preserved', 'Research ready'],
     },
     {
+      title: 'TMA',
+      description:
+        'Tissue microarray blocks and slides enabling high-throughput histology and biomarker screening across multiple samples.',
+      features: ['Multi-core arrays', 'High-throughput screening', 'IHC & pathology ready', 'Custom layouts on request'],
+    },
+    {
       title: 'Extracted DNA From Tissue',
       description: 'High-quality extracted DNA prepared for genomic and molecular research workflows.',
       features: ['Assay-ready', 'Quality verified', 'Quantified yields', 'Research grade'],

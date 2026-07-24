@@ -1,9 +1,15 @@
 'use client';
 
+import { useState } from 'react';
 import Hero from '@/components/Hero';
 import FeatureCard from '@/components/FeatureCard';
 import ServiceCard from '@/components/ServiceCard';
 import ProcessStep from '@/components/ProcessStep';
+import SolutionsCategoryToggle, {
+  type SolutionsCategory,
+} from '@/components/SolutionsCategoryToggle';
+import { homeAnimalServices, homeHumanServices } from '@/lib/solutions';
+import AnimalSpeciesGrid from '@/components/AnimalSpeciesGrid';
 import { 
   FiShield, 
   FiGlobe, 
@@ -13,10 +19,13 @@ import {
   FiCheckCircle,
   FiUserCheck
 } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function Home() {
+  const [solutionsCategory, setSolutionsCategory] = useState<SolutionsCategory>('human');
+  const services =
+    solutionsCategory === 'human' ? homeHumanServices : homeAnimalServices;
   const features = [
     {
       icon: <FiUserCheck />,
@@ -62,33 +71,6 @@ export default function Home() {
       icon: <FiTarget />,
       title: 'Therapeutic Area Focus',
       description: 'Deep experience across oncology, infectious diseases, metabolic/endocrine, and autoimmune indications, with disease-specific cohorts and controls.',
-    },
-  ];
-
-  const services = [
-    {
-      title: 'Tissue Samples',
-      description: 'FFPE, frozen, cryopreserved, healthy, and diseased tissues that support histology, IHC, molecular profiling, and biomarker discovery—plus extracted DNA and RNA. Ideal for translational research, companion diagnostics development, and validation of tissue-based assays.',
-      href: '/solutions/tissue-samples',
-      features: ['FFPE, Frozen & Cryopreserved', 'Healthy Tissues & Healthy Donors', 'Diseased tissues', 'Extracted DNA & Extracted RNA', 'Use cases: IHC, NGS, biomarker validation'],
-    },
-    {
-      title: 'Blood & Derivatives',
-      description: 'Serum, plasma, buffy coat, whole blood, and PBMC collected under controlled pre-analytical conditions. Ideal for biomarker discovery, immunophenotyping, genomics, and longitudinal monitoring studies.',
-      href: '/solutions/blood-derivatives',
-      features: ['Serum & plasma panels', 'Buffy coat & whole blood', 'PBMC', 'Stabilized and fresh collections', 'Use cases: flow cytometry, NGS, cytokine profiling'],
-    },
-    {
-      title: 'Biofluids',
-      description: 'Urine, saliva, CSF, synovial fluid, ascites, aqueous humour, bone marrow, BMMNC, and other matrices to support non-invasive and specialized studies. Ideal for early detection, pharmacodynamic markers, and multi-omics workflows.',
-      href: '/solutions/biofluids',
-      features: ['Urine & saliva', 'CSF & synovial fluid', 'Bone Marrow & BMMNC', 'Others: sputum, semen, cord blood, tears', 'Use cases: metabolomics, proteomics, liquid biopsy'],
-    },
-    {
-      title: 'Matched Set Biospecimens',
-      description: 'Integrated access to tissue, blood, and other biospecimens from the same donor, strengthening correlations across modalities. Ideal for longitudinal studies, multi-omics projects, and precision medicine programs.',
-      href: '/solutions/matched-sets',
-      features: ['Same-donor tissue & blood', 'Multiple timepoints where feasible', 'Linked clinical & pathological data', 'Use cases: multi-omics, precision medicine, translational cohorts'],
     },
   ];
 
@@ -377,23 +359,47 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Access a Comprehensive Range of Biospecimens
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-8">
               Our Solutions
             </p>
+            <SolutionsCategoryToggle
+              value={solutionsCategory}
+              onChange={setSolutionsCategory}
+            />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                href={service.href}
-                features={service.features}
-                delay={index * 0.1}
-              />
-            ))}
-          </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={solutionsCategory}
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -14 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div
+                className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${
+                  solutionsCategory === 'animal' ? 'max-w-4xl mx-auto' : ''
+                }`}
+              >
+                {services.map((service, index) => (
+                  <ServiceCard
+                    key={`${solutionsCategory}-${service.href}`}
+                    title={service.title}
+                    description={service.description}
+                    href={service.href}
+                    features={service.features}
+                    delay={index * 0.08}
+                  />
+                ))}
+              </div>
+
+              {solutionsCategory === 'animal' && (
+                <div className="mt-12 bg-gradient-to-br from-primary-50 to-teal-50 rounded-2xl p-8 md:p-12">
+                  <AnimalSpeciesGrid compact />
+                </div>
+              )}
+            </motion.div>
+          </AnimatePresence>
 
           <div className="mt-12 text-center">
             <Link

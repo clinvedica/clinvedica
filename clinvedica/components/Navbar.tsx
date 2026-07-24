@@ -20,17 +20,25 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
+  const navLinks: {
+    href: string;
+    label: string;
+    submenu?: { href?: string; label: string; heading?: boolean }[];
+  }[] = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     {
       href: '/solutions',
       label: 'Solutions',
       submenu: [
+        { label: 'Human', heading: true },
         { href: '/solutions/tissue-samples', label: 'Tissue Samples' },
         { href: '/solutions/blood-derivatives', label: 'Blood & Derivatives' },
         { href: '/solutions/biofluids', label: 'Biofluids' },
         { href: '/solutions/matched-sets', label: 'Matched Set Biospecimens' },
+        { label: 'Animal', heading: true },
+        { href: '/solutions/animal-tissue-samples', label: 'Animal Tissue Samples' },
+        { href: '/solutions/animal-blood-biofluids', label: 'Animal Blood' },
       ],
     },
     { href: '/capabilities', label: 'Capabilities' },
@@ -45,6 +53,40 @@ export default function Navbar() {
       return pathname === '/';
     }
     return pathname.startsWith(href);
+  };
+
+  const renderSubmenuItem = (
+    subLink: { href?: string; label: string; heading?: boolean },
+    onNavigate?: () => void,
+    mobile = false
+  ) => {
+    if (subLink.heading) {
+      return (
+        <div
+          key={`heading-${subLink.label}`}
+          className={`px-4 pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-gray-400 ${
+            mobile ? 'mt-1' : ''
+          }`}
+        >
+          {subLink.label}
+        </div>
+      );
+    }
+
+    return (
+      <Link
+        key={subLink.href}
+        href={subLink.href!}
+        onClick={onNavigate}
+        className={
+          mobile
+            ? 'block px-4 py-2 rounded-lg text-sm text-gray-600 hover:text-primary-600 hover:bg-primary-50 transition-colors'
+            : 'block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors'
+        }
+      >
+        {subLink.label}
+      </Link>
+    );
   };
 
   return (
@@ -85,17 +127,9 @@ export default function Navbar() {
                   {link.label}
                 </Link>
                 {link.submenu && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
                     <div className="py-2">
-                      {link.submenu.map((subLink) => (
-                        <Link
-                          key={subLink.href}
-                          href={subLink.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
-                        >
-                          {subLink.label}
-                        </Link>
-                      ))}
+                      {link.submenu.map((subLink) => renderSubmenuItem(subLink))}
                     </div>
                   </div>
                 )}
@@ -139,16 +173,9 @@ export default function Navbar() {
                   </Link>
                   {link.submenu && (
                     <div className="pl-4 mt-1 space-y-1">
-                      {link.submenu.map((subLink) => (
-                        <Link
-                          key={subLink.href}
-                          href={subLink.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block px-4 py-2 rounded-lg text-sm text-gray-600 hover:text-primary-600 hover:bg-primary-50 transition-colors"
-                        >
-                          {subLink.label}
-                        </Link>
-                      ))}
+                      {link.submenu.map((subLink) =>
+                        renderSubmenuItem(subLink, () => setIsOpen(false), true)
+                      )}
                     </div>
                   )}
                 </div>

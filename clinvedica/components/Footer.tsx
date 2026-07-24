@@ -88,6 +88,16 @@ export default function Footer() {
                   Matched Sets
                 </Link>
               </li>
+              <li>
+                <Link href="/solutions/animal-tissue-samples" className="hover:text-primary-400 transition-colors">
+                  Animal Tissue Samples
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions/animal-blood-biofluids" className="hover:text-primary-400 transition-colors">
+                  Animal Blood
+                </Link>
+              </li>
             </ul>
           </div>
 
